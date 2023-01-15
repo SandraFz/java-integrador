@@ -47,12 +47,12 @@ public class UpdateDepartamentController extends HttpServlet {
 		
 		Long numero = Long.parseLong(req.getParameter("numero"));
 		String nombre = req.getParameter("nombre");
-		String presupuesto = req.getParameter("nombre");
+		String presupuesto = req.getParameter("presupuesto");
 		
 		Departamento deptoEditado = new Departamento(numero, nombre, Double.parseDouble(presupuesto));
 		
 		try {
-			deptoDao.updateDepartment(deptoEditado);
+			deptoDao.updateDepartment(deptoEditado, numero);
 		}
 		
 		catch (Exception e){

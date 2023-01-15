@@ -40,7 +40,7 @@
 						>
 						Eliminar
 					</a> -->
-                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#depto" onclick="setDepartamentoId(<%=depto.getNumero()%>)">Eliminar</button>
+                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#eliminar" onclick="setDepartamentoId(<%=depto.getNumero()%>)">Eliminar</button>
                 </td>
               </tr>
               <% } %>
@@ -49,31 +49,32 @@
           
           <!-- modal -->
           
-          <div class="modal fade" id="depto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		  <div class="modal-dialog">
-		    <div class="modal-content">
-		    	<form action="<%=request.getContextPath()%>/deleteDepto">
-		    	  <input type="hidden" name="idDepto" id="idDepto">
-			      <div class="modal-header">
-			        <h5 class="modal-title" id="exampleModalLabel">Eliminar Departamento</h5>
-			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-			      </div>
-			      <div class="modal-body">
-			        ¿Confirma que desea eliminar? 
-			      </div>
-			      <div class="modal-footer">
-			        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-			        <button type="submit" class="btn btn-danger">Eliminar</button>
-			      </div>
-		    	</form>
-		    </div>
-		  </div>
-		</div>
+          <div class="modal" tabindex="-1" id="eliminar">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="<%=request.getContextPath()%>/deleteDepto" method="GET">
+                
+                <div class="modal-body">
+                  <p>Está seguro que desea eliminar este departamento?</p>
+                </div>
+                <input type="hidden" name="deptoToDelete" id="depto">
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                  <button type="submit" class="btn btn-danger">Eliminar</button>
+                </div>
+                
+                </form>
+              </div>
+            </div>
+          </div>
     </main>
     <script src="bootstrap.js"></script>
      <script>
 			function setDepartamentoId(numero) {
-				document.getElementById('idDepto').value=numero;
+				document.getElementById('depto').value=numero;
 			}
 	  </script>
 </body>

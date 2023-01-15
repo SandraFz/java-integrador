@@ -28,14 +28,14 @@
                             Agregar
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Departamentos</a></li>
+                            <li><a class="dropdown-item" href="<%=request.getContextPath()%>/deptoNew.jsp">Departamentos</a></li>
                             <li><a class="dropdown-item" href="#">Empleados</a></li>
                         </ul>
                     </li>
 
                 </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <form class="d-flex" action="<%=request.getContextPath()%>/search" method="GET">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="nombre">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </div>

@@ -146,7 +146,7 @@ public class DepartamentoDAOimpl implements iDepartamento {
 		
 	}*/
 	
-	public void updateDepartment(Departamento depto) throws Exception {
+	public void updateDepartment(Departamento depto, Long numero) throws Exception {
 
 		Connection connection = AdministradorDeConexiones.conectDB();
 		
@@ -156,7 +156,7 @@ public class DepartamentoDAOimpl implements iDepartamento {
 		
 		statement.setString(1, depto.getNombre());
 		statement.setDouble(2, depto.getPresupuesto());
-		statement.setLong(3, depto.getNumero());
+		statement.setLong(3, numero);
 		
 		statement.execute();
 		

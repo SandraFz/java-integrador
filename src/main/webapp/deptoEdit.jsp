@@ -27,13 +27,13 @@
                 <div class="w-50 ms-1 me-1">
                     <label for="numero">Nombre</label>
                     <input class="form-control" type="text" value="<%= depto.getNombre() %>"
-                        aria-label="readonly input example" name="numero">
+                        aria-label="readonly input example" name="nombre">
                 </div>
 
                 <div class="w-50 ms-1 me-1">
                     <label for="numero">Presupuesto</label>
                     <input class="form-control" type="text" value="<%= depto.getPresupuesto() %>"
-                        aria-label="readonly input example" name="numero">
+                        aria-label="readonly input example" name="presupuesto">
                 </div>
             </div>
             <div class="mt-3 d-flex setButtons">

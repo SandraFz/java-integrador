@@ -19,16 +19,16 @@ public class DeleteDepartamentoController extends HttpServlet {
 		
 		iDepartamento depto = new DepartamentoDAOimpl();
 		
-		Long numero = Long.parseLong(req.getParameter("numero"));
+		Long numero = Long.parseLong(req.getParameter("deptoToDelete"));
 		
 		try {
-			//depto.deleteDepartment(numero);
-			System.out.println("El número es: " + numero);
+			depto.deleteDepartment(numero);
+			
 		}
 		
 		catch(Exception e) {
 			e.printStackTrace();
-			System.out.println("El número es: " + numero);
+			
 		}
 		
 		getServletContext().getRequestDispatcher("/findAllDptos").forward(req, res);
