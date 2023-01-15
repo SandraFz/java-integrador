@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DesafÃ­o Java</title>
-    <link rel="shortcut icon" href="./R.ico">
-    <link rel="stylesheet" href="./bootstrap-5.1.3-dist/css/bootstrap.css">
+    <title>Desafío Java</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico">
+    <link rel="stylesheet" href="./bootstrap.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -20,9 +20,9 @@
             <div class="card mb-3">
 
                 <div class="card-body top-card">
-                    <h5 class="card-title">Bienvenid@ al Trabajo Integrador Java - Codo a Codo 2022</h5>
+                    <h5 class="card-title">Codo a Codo 2022</h5>
                     <div>
-                        <p class="card-text">AquÃ­ encontrarÃ¡s los enlaces a mis proyectos entregados en el segundo cuatrimestre del curso Full Stack Java de Codo a </p>
+                        <p class="card-text">Aquí encontrarás los proyectos de Sandra N. Fernández trabajados durante el curso Full Stack Java de Codo a Codo 2022/comisión 22561.</p>
                     </div>
                 </div>
             </div>
@@ -62,22 +62,22 @@
                             height action.</p>
                     </div>
 
-                </div>
-
-                <div class="card">
-                    <a class="img-cards" href="https://github.com/SandraFz/java-integrador" target="_blank">
-                        <img src="./assets/java-yazilim3718759920843914286.jpeg" class="card-img-top img-db" loading="lazy"
-                            alt="Esquema de base de datos">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">DesafÃ­o Java</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This card has even longer content than the first to show that equal
-                            height action.</p>
-                    </div>
-                </div>
-
+                    
             </div>
+            <div class="card">
+                        <a class="img-cards" href="<%=request.getContextPath()%>/start.jsp" target="_blank">
+                            <img src="./assets/java-img.jpeg" class="card-img-top img-db" loading="lazy"
+                                alt="Esquema de base de datos">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Desafío Java</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This card has even longer content than the first to show that equal
+                                height action.</p>
+                        </div>
+                </div>
+
+        </div>
 
     </main>
 
@@ -85,7 +85,7 @@
 
     </footer>
 
-    <script src="./bootstrap-5.1.3-dist/js/bootstrap.bundle.js"></script>
+    <script src="./bootstrap.js"></script>
 </body>
 
 </html>

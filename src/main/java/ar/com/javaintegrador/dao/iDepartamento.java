@@ -18,7 +18,9 @@ public interface iDepartamento {
 	public List<Departamento> allDepartaments () throws Exception;
 	
 	//Actualiza un departamento
-	public void updateDepartment (Departamento depto, Long number) throws Exception;
+	/*public void updateDepartment (Departamento depto, Long number) throws Exception;*/
+	
+	public void updateDepartment (Departamento depto) throws Exception;
 	
 	//Actualiza solo el presupuesto del departamento
 	public void updatePresupuestoDpto (Double presupuesto, Long numero) throws Exception;

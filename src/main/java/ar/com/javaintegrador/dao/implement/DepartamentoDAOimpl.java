@@ -100,14 +100,14 @@ public class DepartamentoDAOimpl implements iDepartamento {
 	}
 
 	@Override
-	//Devuelve la lista de los primeros 5 departamentos
+	//Devuelve la lista de los primeros 10 departamentos
 	public List<Departamento> allDepartaments() throws Exception {
 
 		Connection connection = AdministradorDeConexiones.conectDB();
 		
 		Statement statement = connection.createStatement();
 		
-		String sql = "SELECT * FROM Departamento LIMIT 5";
+		String sql = "SELECT * FROM Departamento LIMIT 10";
 		
 		ResultSet resultset = statement.executeQuery(sql);
 		
@@ -130,7 +130,7 @@ public class DepartamentoDAOimpl implements iDepartamento {
 
 	@Override
 	//Actualiza los datos del departamento que le pasamos.
-	public void updateDepartment(Departamento depto, Long number) throws Exception {
+	/*public void updateDepartment(Departamento depto, Long number) throws Exception {
 
 		Connection connection = AdministradorDeConexiones.conectDB();
 		
@@ -141,6 +141,22 @@ public class DepartamentoDAOimpl implements iDepartamento {
 		statement.setString(1, depto.getNombre());
 		statement.setDouble(2, depto.getPresupuesto());
 		statement.setLong(3, number);
+		
+		statement.execute();
+		
+	}*/
+	
+	public void updateDepartment(Departamento depto) throws Exception {
+
+		Connection connection = AdministradorDeConexiones.conectDB();
+		
+		String sql = "UPDATE Departamento SET nombre = ?, presupuesto = ? WHERE numero = ?";
+		
+		PreparedStatement statement = connection.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
+		
+		statement.setString(1, depto.getNombre());
+		statement.setDouble(2, depto.getPresupuesto());
+		statement.setLong(3, depto.getNumero());
 		
 		statement.execute();
 		

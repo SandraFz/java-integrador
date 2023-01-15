@@ -1,0 +1,45 @@
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem;
+    padding-top: 1rem;
+}
+
+.card{
+    margin: 1rem;
+    border-radius: 5px;
+    box-shadow: 3px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.img-front, .img-bootstrap, .img-db, .img-card{
+    border-radius: 5px;
+}
+
+.top-card{
+    display: flex;
+flex-direction: column;
+   align-items: center;
+}
+
+.formNewDpto{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.inputs{
+    justify-content: space-between;
+}
+
+.inputsEdit{
+    display: flex;
+    justify-content: space-between;
+}
+
+.setButtons{
+    display: flex;
+    justify-content:end;
+}
