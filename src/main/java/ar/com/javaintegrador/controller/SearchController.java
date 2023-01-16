@@ -24,19 +24,20 @@ public class SearchController extends HttpServlet {
 		
 		String nombre = req.getParameter("nombre");
 		
-		List<Departamento> deptos = new ArrayList<>();
+		List<Departamento> deptos;
 		
 		try {
-			 deptos = depto.searchDepartment(nombre);
-			
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			deptos = depto.searchDepartment(nombre);
+		}
+		catch(Exception e){
 			e.printStackTrace();
 		}
 		
 		req.setAttribute("deptos", deptos);
 		
 		getServletContext().getRequestDispatcher("/deptoList.jsp").forward(req, res);
+		
+		
 	}
 
 	

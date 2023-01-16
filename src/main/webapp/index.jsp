@@ -35,8 +35,7 @@
                     </a>
                     <div class="card-body">
                         <h5 class="card-title">Maquetado HTML, CSS y bootstrap</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
+                        <p class="card-text">El primer trabajo integrador fue de el de maquetar una página según un prototipo que nos proveyeron. Aquí apliqué los conocimientos básicos de HTML, CSS y Bootstrap.</p>
                     </div>
                 </div>
                 <div class="card">
@@ -45,9 +44,8 @@
                             loading="lazy" alt="Logos de Bootstrap y HTML">
                     </a>
                     <div class="card-body">
-                        <h5 class="card-title">Maquetado con bootstrap</h5>
-                        <p class="card-text">This card has supporting text below as a natural lead-in to additional
-                            content.</p>
+                        <h5 class="card-title">Maquetado con Bootstrap</h5>
+                        <p class="card-text">Este trabajo de maquetado, si bien se trataba de aplicar todo lo posible Bootstrap, me atreví a experimentar, de modo que el backgraund de las cards están hechas solo con CSS y solo los logos son imágenes.</p>
                     </div>
                 </div>
                 <div class="card">
@@ -56,10 +54,8 @@
                             alt="Esquema de base de datos">
                     </a>
                     <div class="card-body">
-                        <h5 class="card-title">Base de datos</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This card has even longer content than the first to show that equal
-                            height action.</p>
+                        <h5 class="card-title">Base de datos</h5> 
+                        <p class="card-text">En esta etapa aprendimos a crear una base de datos y a realizar las sentencias básicas. Esta BD es la misma que uso para el trabajo final.</p>
                     </div>
 
                     
@@ -71,9 +67,8 @@
                         </a>
                         <div class="card-body">
                             <h5 class="card-title">Desafío Java</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This card has even longer content than the first to show that equal
-                                height action.</p>
+                            <p class="card-text">Finalmente estuvimos en condiciones de crear un CRUD con Java. El código se puede encontrar en mi Github como<a href="https://github.com/SandraFz/java-integrador" target="_blank">Java-integrador</a>
+                            </p>
                         </div>
                 </div>
 

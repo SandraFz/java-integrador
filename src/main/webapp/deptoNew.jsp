@@ -11,7 +11,7 @@
   
   <%Departamento depto = (Departamento)request.getAttribute("deptos");%>
 
-        <form>
+        <form action="<%=request.getContextPath()%>/newDepto" method="POST">
         
         <div class="w-75 formNewDpto">
             <h2>Nuevo departamento</h2>
