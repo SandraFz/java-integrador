@@ -55,7 +55,7 @@
                 <div class="modal-header">
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form action="<%=request.getContextPath()%>/deleteDepto" method="GET">
+                <form action="<%=request.getContextPath()%>" method="GET">
                 
                 <div class="modal-body">
                   <p>Está seguro que desea eliminar este departamento?</p>

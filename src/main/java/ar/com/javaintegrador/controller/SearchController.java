@@ -1,6 +1,7 @@
 package ar.com.javaintegrador.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -13,7 +14,7 @@ import ar.com.javaintegrador.dao.iDepartamento;
 import ar.com.javaintegrador.dao.implement.DepartamentoDAOimpl;
 import ar.com.javaintegrador.domain.Departamento;
 
-@WebServlet("search")
+@WebServlet("/search")
 public class SearchController extends HttpServlet {
 	
 	@Override
@@ -23,15 +24,19 @@ public class SearchController extends HttpServlet {
 		
 		String nombre = req.getParameter("nombre");
 		
+		List<Departamento> deptos = new ArrayList<>();
+		
 		try {
-			depto.searchDepartment(nombre);
+			 deptos = depto.searchDepartment(nombre);
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		
-		catch(Exception e) {
-			e.printStackTrace();;
-		}
+		req.setAttribute("deptos", deptos);
 		
-		getServletContext().getRequestDispatcher("/findAllDptos").forward(req, res);
+		getServletContext().getRequestDispatcher("/deptoList.jsp").forward(req, res);
 	}
 
 	

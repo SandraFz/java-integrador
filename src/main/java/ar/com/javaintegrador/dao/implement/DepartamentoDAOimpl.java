@@ -77,26 +77,31 @@ public class DepartamentoDAOimpl implements iDepartamento {
 		String sql = "SELECT * FROM Departamento WHERE nombre = ?";
 		//String sql1 = "SELECT * FROM Departamento WHERE nombre LIKE " + name +"%";
 		
-		Statement statement = connection.createStatement();
+		PreparedStatement statement = connection.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
+		statement.setString(1, "%" + sql + "%");
 		
-		ResultSet resultset = statement.executeQuery(sql);
+		//statement.execute();
 		
-		List<Departamento> listDpt = new ArrayList<Departamento>();
+		//Statement statement = connection.createStatement();
+		
+		ResultSet resultset = statement.executeQuery();
+		
+		List<Departamento> listDepto = new ArrayList<Departamento>();
 		
 		while(resultset.next()) {
 			
+		//istDepto.add(departamento());
 			Long numero = resultset.getLong("numero");
 			String nombre = resultset.getString("nombre");
 			Double presupuesto = resultset.getDouble("presupuesto");
 			
-			Departamento deptoByName = new Departamento (numero, nombre, presupuesto);
-			listDpt.add(deptoByName);
+			Departamento deptoByName = new Departamento(numero, nombre, presupuesto);
 			
-			return listDpt;
+			listDepto.add(deptoByName);
 			
 		}
 		
-		return null;
+		return listDepto;
 	}
 
 	@Override

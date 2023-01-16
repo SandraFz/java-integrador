@@ -34,7 +34,7 @@
                     </li>
 
                 </ul>
-                <form class="d-flex" action="<%=request.getContextPath()%>/search" method="GET">
+                <form class="d-flex" action="" method="">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="nombre">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
