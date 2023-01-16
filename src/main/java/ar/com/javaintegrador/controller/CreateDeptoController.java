@@ -31,8 +31,8 @@ public class CreateDeptoController extends HttpServlet {
 		}
 		
 		catch (Exception e) {
-			
 			e.printStackTrace();
+			
 		}
 		
 		getServletContext().getRequestDispatcher("/findAllDptos").forward(req, res);

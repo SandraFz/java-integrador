@@ -72,10 +72,6 @@
           </div>
     </main>
     <script src="bootstrap.js"></script>
-     <script>
-			function setDepartamentoId(numero) {
-				document.getElementById('depto').value=numero;
-			}
-	  </script>
+     <script src="javascript.js"></script>
 </body>
 </html>

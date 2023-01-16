@@ -16,7 +16,7 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="<%=request.getContextPath()%>/findAllDptos">Departamentos</a></li>
-                            <li><a class="dropdown-item" href="#">Empleados</a></li>
+                            <li id=""><a class="dropdown-item" href="#" id="alert">Empleados</a></li>
                             <!--<li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">Something else here</a></li>-->
                         </ul>
@@ -29,15 +29,16 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="<%=request.getContextPath()%>/deptoNew.jsp">Departamentos</a></li>
-                            <li><a class="dropdown-item" href="#">Empleados</a></li>
+                            <li><a class="dropdown-item" href="#" id="alert1">Empleados</a></li>
                         </ul>
                     </li>
 
                 </ul>
                 <form class="d-flex" action="<%=request.getContextPath()%>/search" method="GET">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="nombre">
+                    <input id="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="nombre">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </div>
         </div>
+        <script src="./javascript.js"></script>
     </nav>
