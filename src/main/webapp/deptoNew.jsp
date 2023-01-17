@@ -44,6 +44,6 @@
         </form>
         
     </main>
-    <script src="javascript.jsp"></script>
+    <script src="bootstrap.js"></script>
 </body>
 </html>
